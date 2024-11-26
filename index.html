@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Content with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="content">
+    <p>This is the original content.</p>
+  </div>
+
+  <button id="change-content">Load New Content</button>
+
+  <script>
+    $(document).ready(function(){
+      $("#change-content").click(function(){
+        // Load the content from "new-content.html" into the div with id "content"
+        $("#content").load("new-content.html");
+      });
+    });
+  </script>
+</body>
+</html>
